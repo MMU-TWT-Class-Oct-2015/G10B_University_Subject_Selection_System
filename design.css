@@ -1,0 +1,31 @@
+ body{
+	font-family:"Times New Roman",Georgia,Serif;
+	margin: 0px auto; /*margin properties set the size of the white space OUTSIDE the border*/
+	}
+#header1{
+	padding-left: 450px;
+	background-color: skyblue;
+	height: 62px;
+}
+nav ul{
+	margin:0px;
+	padding-top:0px;
+	list-style:none;
+}
+
+nav ul li{
+	float:left;
+}
+
+nav ul li a{
+	display: block;
+	white-space: nowrap; /*Specify that the text in nav ul li a elements will never wrap*/
+	background-color: darkblue;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	padding: 10px 20px 30px 15px; /*top padding is 10px right padding is 30px bottom padding is 10px left padding is 15px*/
+	border: 1px solid #003366;
+}
+
+}
