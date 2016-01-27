@@ -20,7 +20,8 @@
 </head>
 
 <body>
-<div id="header1">
+
+<div id="header1" style="margin-left:auto;margin-right:auto;width:1333px;">
 	<nav>
 	<ul>
 			<li><a href="index.php">Admin Index</a></li>
@@ -29,11 +30,15 @@
 			<li><a href="view_sub.php">View Subjects</a></li>
 	</ul>
 	</nav>
-</div>
-			<p>Welcome, <?php echo $row["Student_Name"]?>
 
-
-
+	<span style="text-align:right;float:right;color:#FFFFFF;margin-top:-10px;font-size:25px;" >
+	
+			<p >Welcome, <?php echo $row["Student_Name"]?>
 			<input type="submit" name="logoutbtn" value="Logout" onclick="window.location='logout.php';"/></p>
-</body>
+	</span>
+</div>	
+
+			
+
+			</body>
 </html>
