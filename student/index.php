@@ -1,7 +1,7 @@
 <?php
 	include("../dataconn.php");
 	$sess_aid=$_SESSION["sid"];
-	$result = mysql_query("select * from student where Student_ID = $sess_aid");
+	$result = mysql_query("select * from student where Stu_ID = $sess_aid");
 	$row = mysql_fetch_assoc($result);
 	if (!$sess_aid) {
 	 header('Location: login.php');
@@ -18,9 +18,9 @@
 
 <body>
 
-<div id="header1" style="margin-left:auto;margin-right:auto;width:1600px;">
+<div id="header1" style="margin-left:auto;margin-right:auto;width:1520px;">
 			<a href="index.php"><img src="../picture/logo.png" width="205" height="73"></a>
-			
+
 	<nav>
 	<ul>
 					<li><a href="index.php">Home</a></li>
@@ -31,11 +31,11 @@
 	</nav>
 
 	<span style="text-align:right;float:right;color:#FFFFFF;margin-top:-10px;font-size:25px;" >
-	
-			<p >Welcome, <?php echo $row["Student_Name"]?> ||
+
+			<p style="margin-right:20px;">Welcome, <?php echo $row["Student_Name"]?> ||
 			<a href="#" onclick="window.location='logout.php'"  style="color:black; text-decoration:none;">Logout</a></p>
 	</span>
-</div>	
+</div>
 
 
 			</body>
