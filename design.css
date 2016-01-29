@@ -3,20 +3,34 @@ body{
 	margin: 0px auto; /*margin properties set the size of the white space OUTSIDE the border*/
 	background-color:#ccccff;
 	}
-#header1{	
+#backcolor
+{
+	background-color:#ffb380;
+}
+#header1{
 	background-color: skyblue;
-	height: 73px;
+	height: 72px;
+}
+#header2{
+	background-color: red;
+	height: 72px;
+}
+nav ul{
+	margin-left:370px;
+	margin-top:-104px;
+	list-style:none;
+	font-size:25px;
 }
 
-nav ul{
-	margin-left:480px;
+#list {
+    margin-left:450px;
 	margin-top:-104px;
 	list-style:none;
 	font-size:25px;
 }
 
 nav ul li{
-	
+
 	float:left; /*float property can be used to wrap tex*/
 }
 
