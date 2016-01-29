@@ -17,24 +17,26 @@
 <html>
 	<head>
 	<title>Admin index</title>
-	<link rel="stylesheet" href="design.css" type="text/css" />
+	<link rel="stylesheet" href="../design.css" type="text/css" />
 </head>
 
-<body>
-	<table border="1">
-		<tr>
-			<td><a href="index.php">Admin Index</a></td>
-			<td><a href="edit_pro.php">Edit Profile</a></td>
-			<td><a href="add_sub.php">Add Subjects</a></td>
-			<td><a href="view_sub.php">View Subjects</a></td>
-		</tr>
-	</table>
+<body id="backcolor">
+<div id="header2" style="margin-left:auto;margin-right:auto;width:1520px;">
+			<a href="index.php"><img src="../picture/logo.png" width="205" height="73"></a>
 
-
-
-
+	<nav>
+	<ul>
+			<li><a href="index.php">Admin Index</a></li>
+			<li><a href="edit_pro.php">Edit Profile</a></li>
+			<li><a href="add_sub.php">Add Subjects</a></li>
+			<li><a href="view_sub.php">View Subjects</a></li>
+	</ul>
+	</nav>
+	<span style="text-align:right;float:right;color:#FFFFFF;margin-top:-10px;font-size:25px;" >
+			<p style="margin-right:20px;">Welcome, <?php echo $row["Admin_Name"]?>
+			||<a href="register.php"> Register</a> 
 			<input type="submit" name="logoutbtn" value="Logout" onclick="window.location='logout.php';"/></p>
-
+</div>
 			<form name="editfrm" method="post" action="">
 				<p>ID : <?php echo $row["Admin_ID"];?>
 				<p>Name : <input type="text" name="aname" value=" <?php echo $row['Admin_Name'];?> "/>
