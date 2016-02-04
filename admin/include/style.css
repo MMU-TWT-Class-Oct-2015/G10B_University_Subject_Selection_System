@@ -1,5 +1,5 @@
 body {
-	background: url(../img/latar.jpg);
+	background: url(img/latar.jpg);
 	margin: 0;
 	padding: 0;
 	font-family: Arial;
@@ -7,14 +7,14 @@ body {
 	color: #2e2e2e;
 	text-align: center;
 }
-.clear {clear: both;}
-small {font-size: 11px; color: 5b5b5b;}
-img {border: none;}
-a {color: #527e19; text-decoration: none;}
-a:hover {color: #000;}
-label {padding: 0; margin: 0 0 10px 0;}
-input {padding: 4px;color: #5b5b5b;border: 1px solid #dcdcdc;
--moz-border-radius: 3px;-webkit-border-radius: 3px;-o-border-radius: 3px;}
+
+.clear {
+	clear: both;
+}
+
+
+
+input {padding: 4px;color: #5b5b5b;border: 1px solid #dcdcdc;-moz-border-radius: 3px;-webkit-border-radius: 3px;-o-border-radius: 3px;}
 input.login { width: 200px; margin: 5px 0 10px 0px;}
 
 .button {
@@ -39,7 +39,26 @@ input.login { width: 200px; margin: 5px 0 10px 0px;}
 	-moz-box-shadow: 0px 0px 8px #dcdcdc;
 	-webkit-box-shadow: 0px 0px 8px #dcdcdc;
 }
+.inHeader {
+	float: center;
+	background: url(img/logo.png) no-repeat left center;
+	margin: auto;
+	width: 920px;
+	height: 110px;
+	padding: 15px;
+	border-right: 0px solid #dcdcdc;
+	border-left: 0px solid #dcdcdc;
+}
 
+.mosAdmin {
+	float: right;
+	border: 0px solid #dcdcdc;
+	margin: 0 1px 0 auto;
+	text-align: right;
+	padding: 10px 40px 10px 10px;
+	background: url(img/Administrator.png) no-repeat right center;
+	text-shadow: 1px 1px #fff;
+}
 
 #loginForm {
 	width: 400px;
@@ -49,9 +68,7 @@ input.login { width: 200px; margin: 5px 0 10px 0px;}
 	text-align: left;
 	background:#fff url(img/lock.png) no-repeat left center;
 	margin: 50px auto 0 auto;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-o-border-radius: 5px;
+	border-radius: 5px;
 }
 .headLoginForm {
 	width: 380px;
@@ -59,11 +76,57 @@ input.login { width: 200px; margin: 5px 0 10px 0px;}
 	font-size: 18px;
 	font-weight: bold;
 	text-shadow: 1px 1px #fff;
-	text-align: left;
+	text-align: center;
 	height: 20px;
 	border-bottom: 1px solid #dcdcdc;
 	background: url(img/headerbg.jpg) repeat left center;
 }
 .fieldLogin {
 	margin: 30px 5px 0 140px;
+}
+#wrapper {
+	width: 950px;
+	padding: 15px 0 0 0;
+	position: relative;
+	border-left: 1px solid #dcdcdc;
+	border-right: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+	float: center;
+	margin: auto;
+	text-align: left;
+	background: #fff url(img/bg_kiri.png) repeat-y;
+	box-shadow: 0px 0px 8px #dcdcdc;
+}
+#leftBar {
+	width: 185px;
+	float: left;
+	padding: 0 0 20px 10px;
+	border-right: 0px solid #dcdcdc;
+	text-align: left;
+}
+#leftBar ul {list-style: none;padding: 0; margin: 0;font-size: 13px;}
+#leftBar ul li {
+	width: 164px;
+	background: url(img/icon-left.png) no-repeat left center, url(img/green.jpg) repeat left center;
+	padding: 10px 0 10px 10px; 
+	margin-top: 8px;
+	margin-left: auto;
+	border: 1px solid #dcdcdc;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+#leftBar ul li a {
+	width: 100%;
+	color: #2e2e2e;
+    cursor: pointer;
+	padding: 10px 0px 10px 20px;
+    -webkit-transition: padding-left 250ms ease-out;
+	-moz-transition: padding-left 250ms ease-out;
+	text-decoration: none;
+}
+#leftBar ul li a:hover {
+    padding-left: 30px;
+	text-decoration: none;
+	color: #fff;
+	text-shadow: 1px 1px #496d2a;
 }
