@@ -4,25 +4,33 @@
 <!DOCTYPE html>
 <html>
 <head>
+<head>
+	<link rel="stylesheet" type="text/css" href="include/style.css">
 	<title>Login Page</title>
 </head>
 
 <body>
+<div id="header">
+	<div class="inHeaderLogin"></div>
+</div>
+
+<div id="loginForm">
+	<div class="headLoginForm">
+		Login Administrator
+	</div>
+	<div class="fieldLogin">
+	<form name="loginfrm" action="" method="post">
+		<label>User ID: </label><br>
+			<input name="uid" type="text" class="login" value="admin" size = "20"> <br>
+		<label>Password : </label><br>
+			<input name="upass" type="password" class="login" value="admin" size = "20"  > <br>
+			<input name="loginbtn" type="submit" class="button" value="Login"><br>
+	</form>
+	</div>
+</div>
 	<span style="float:left;"><h1>University </h1></span>
 	<img src="../picture/logo.png">
-	<form name="loginfrm" action="" method="post">
-		<p>User ID: 
-			<input type="text" name="uid" size = "20" />
-		</p>
 	
-		<p>Password : 
-			<input type="password" name="upass" size = "20" />
-		</p>
-	
-		<p>
-			<input type="submit" name="loginbtn" value="Login" />
-		</p>
-	</form>
 
 </body>
 </html>
