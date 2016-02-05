@@ -56,26 +56,26 @@
 							<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="entryTable">
 								<tr>
 									<td class="label">Subject Code : </td>
-									<td class="content"><input type="text" name="scode" size="80"/></td>
+									<td class="content"><input type="text" name="scode" size="20"/></td>
 								</tr>
 								<tr>
 									<td class="label">Subject Title: </td>
-									<td class="content"><input type="text" name="sname" size="80"/></td>
+									<td class="content"><input type="text" name="sname" size="50"/></td>
 								</tr>
 								<tr>
 									<td class="label">Subject Date: </td>
-									<td class="content"><input type="date" name="sdate" size="80"/></td>
+									<td class="content"><input type="date" name="sdate" size="20"/></td>
 								</tr>
 								<tr>
 									<td class="label">Subject Time: </td>
-									<td class="content"><input type="time" name="stime" size="80"/></td>
+									<td class="content"><input type="time" name="stime" size="20"/></td>
 								</tr>
 								<tr>
 									<td class="label">Subject Year: </td>
-									<td class="content"><input type="year" name="syear" size="80"/></td>
+									<td class="content"><input type="year" name="syear" size="20"/></td>
 								</tr>
 								<tr>
-									<td><input type="submit" name="addbtn" value="Add Now" /></td>
+									<td><input type="submit" name="addbtn" value="Add Now" /> <input name="button" type="button" id="btnCancel" value="Cancel" onClick="window.location.href='index.php';"></td>
 								</tr>
 							</table>
 						</form>
