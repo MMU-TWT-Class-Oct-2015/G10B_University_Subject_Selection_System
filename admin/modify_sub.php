@@ -17,32 +17,73 @@
 <html>
 	<head>
 	<title>Admin index</title>
-	<link rel="stylesheet" href="design.css" type="text/css" />
+	<link rel="stylesheet" href="include/style.css" type="text/css" />
 </head>
 
 <body>
-	<table border="1">
-		<tr>
-			<td><a href="index.php">Admin Index</a></td>
-			<td><a href="edit_pro.php">Edit Profile</a></td>
-			<td><a href="add_sub.php">Add Subjects</a></td>
-			<td><a href="view_sub.php">View Subjects</a></td>
-		</tr>
-	</table>
-
-
-
-
-			<input type="submit" name="logoutbtn" value="Logout" onclick="window.location='logout.php';"/></p>
-
-			<form name="editfrm" method="post" action="">
-				<p>Subject Code : <input type="text" name="scode" value=" <?php echo $row['Subject_Code'];?> "/>
-				<p>Subject Title : <input type="text" name="stitle" value="<?php echo $row['Subject_Title'];?>"/>
-				<p>Subject Date : <input type="date" name="sdate" value="<?php echo $row['Subject_Date'];?>"/>
-				<p>Subject Time : <input type="time" name="stime" value="<?php echo $row['Subject_Time'];?>"/>
-				<p><input type="submit" name="updatebtn" value="Update Now" /></p>
-			</form>
-
+	<div id="header">
+		<div class="inHeader">
+			<div class="mosAdmin">
+				<?php $name = $_SESSION['aid']; ?>
+				Hello, <?php echo $name; ?><br>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<div id="wrapper">
+		<div id="leftBar">
+			<ul>
+				<p>&nbsp;</p>
+				<li> <a href="index.php">Home</a></li>
+				<li><a href="edit_pro.php">Edit Profile</a></li>
+				<li><a href="add_sub.php">Add Subjects</a></li>
+				<li><a href="view_sub.php">View Subjects</a></li>
+				<li><a href="register.php"> Register Student</a></li>
+				<li><a href="user.php">User</a></li>
+				<li><a href="logout.php">Logout</a></li>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+			</ul>   
+		</div>
+		<div id="rightContent">
+			<table width="100%" border="0" cellspacing="0" cellpadding="20">
+				<tr>
+					<td>
+						<form name="editfrm" method="post" action="">
+							<p align="center" class="Title">Modify Subject</p>
+							<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="entryTable">
+								<tr>
+									<td class="label">Subject Code : </td>
+									<td class="content"><input type="text" name="scode" value=" <?php echo $row['Subject_Code'];?> "/></td>
+								</tr>
+								<tr>
+									<td class="label">Subject Title : </td>
+									<td class="content"><input type="text" name="stitle" value="<?php echo $row['Subject_Title'];?>"/></td>
+								</tr>
+								<tr>
+									<td class="label">Subject Date : </td>
+									<td class="content"><input type="date" name="sdate" value="<?php echo $row['Subject_Date'];?>"/></td>
+								</tr>
+								<tr>
+									<td class="label">Subject Time : </td>
+									<td class="content"><input type="time" name="stime" value="<?php echo $row['Subject_Time'];?>"/></td>
+								</tr>
+								<tr>
+									<td><input type="submit" name="updatebtn" value="Update Now" /></td>
+								</tr>
+							</table>
+						</form>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+		
+		</div>
+	</div>
 </body>
 </html>
 
