@@ -71,7 +71,7 @@
 									<td class="content"><input type="time" name="stime" value="<?php echo $row['Subject_Time'];?>"/></td>
 								</tr>
 								<tr>
-									<td><input type="submit" name="updatebtn" value="Update Now" /></td>
+									<td><input type="submit" name="updatebtn" value="Update Now" /> <input name="button" type="button" id="btnCancel" value="Cancel" onClick="window.location.href='view_sub.php';"></td>
 								</tr>
 							</table>
 						</form>
