@@ -130,58 +130,5 @@
 		
 		</div>
 	</div>
-	
-
-
-
-
-
-			<input type="submit" name="logoutbtn" value="Logout" onclick="window.location='logout.php';"/></p>
-
-
-			<form name="addfrm" method="post" action="">
-				<table>
-					<tr>
-						<td>Student Id :</td>
-						<td><input type="text" name="std_id" size = "20" ></td>
-					</tr>
-					<tr>
-						<td>Student Name :</td>
-						<td><input type="text" name="std_name" size = "20" ></td>
-					</tr>
-					<tr>
-						<td>Password :</td>
-						<td><input type="password" name="std_pass" size = "20" ></td>
-					</tr>
-					<tr>
-		  			<td>Gender :</td>
-						<td>
-							<select name="std_gender">
-		        	<option value = "Male">Male</option>
-		        	<option value = "Female">Female</option>
-		        	</select>
-						</td>
-					</tr>
-					<tr>
-						<td>Date :</td>
-						<td><input type="date" name="std_date" size = "20" ></td>
-					</tr>
-					<tr>
-						<td>Year :</td>
-						<td><input type="year" name="std_year" size = "20" ></td>
-					</tr>
-				</table>
-				<p>
-				<table>
-					<tr>
-		  			<td><input type="submit" name="btnregister" value="Submit"></td>
-		  			<td><input type="reset" value="Clear"></td>
-					</tr>
-				</table>
-			</p>
-			<?php 	if(!empty($errors)){
-				echo "<p class='err'>".nl2br($errors)."</p>";
-				} ?>
-			</form>
 </body>
 </html>
