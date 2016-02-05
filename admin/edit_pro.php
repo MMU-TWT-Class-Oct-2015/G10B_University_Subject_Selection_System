@@ -17,32 +17,69 @@
 <html>
 	<head>
 	<title>Admin index</title>
-	<link rel="stylesheet" href="../design.css" type="text/css" />
+	<link rel="stylesheet" href="include/style.css" type="text/css" />
 </head>
 
-<body id="backcolor">
-<div id="header2" style="margin-left:auto;margin-right:auto;width:1520px;">
-			<a href="index.php"><img src="../picture/logo.png" width="205" height="73"></a>
-
-	<nav>
-	<ul>
-			<li><a href="index.php">Admin Index</a></li>
-			<li><a href="edit_pro.php">Edit Profile</a></li>
-			<li><a href="add_sub.php">Add Subjects</a></li>
-			<li><a href="view_sub.php">View Subjects</a></li>
-	</ul>
-	</nav>
-	<span style="text-align:right;float:right;color:#FFFFFF;margin-top:-10px;font-size:25px;" >
-			<p style="margin-right:20px;">Welcome, <?php echo $row["Admin_Name"]?>
-			||<a href="register.php"> Register</a> 
-			<input type="submit" name="logoutbtn" value="Logout" onclick="window.location='logout.php';"/></p>
-</div>
-			<form name="editfrm" method="post" action="">
-				<p>ID : <?php echo $row["Admin_ID"];?>
-				<p>Name : <input type="text" name="aname" value=" <?php echo $row['Admin_Name'];?> "/>
-				<p>Password : <input type="password" name="apass" value="<?php echo $row['Admin_Password'];?>"/>
-				<p><input type="submit" name="updatebtn" value="Update Now" /></p>
-			</form>
+<body>
+	<div id="header">
+		<div class="inHeader">
+			<div class="mosAdmin">
+				<?php $name = $_SESSION['aid']; ?>
+				Hello, <?php echo $name; ?><br>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<div id="wrapper">
+		<div id="leftBar">
+			<ul>
+				<p>&nbsp;</p>
+				<li><a href="index.php">Home</a></li>
+				<li><a href="edit_pro.php">Edit Profile</a></li>
+				<li><a href="add_sub.php">Add Subjects</a></li>
+				<li><a href="view_sub.php">View Subjects</a></li>
+				<li><a href="register.php"> Register Student</a></li>
+				<li><a href="user.php">User</a></li>
+				<li><a href="logout.php">Logout</a></li>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+			</ul>   
+		</div>
+		<div id="rightContent">
+			<table width="100%" border="0" cellspacing="0" cellpadding="20">
+				<tr>
+					<td>
+						<form name="editfrm" method="post" action="">
+							<p align="center" class="Title">Edit Profile</p>
+							<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="entryTable">
+							<tr>
+								<td class = "label">ID : </td>
+								<td class="content"><?php echo $row["Admin_ID"];?></td>
+							</tr>
+							<tr>
+								<td class = "label">Name : </td>
+								<td class="content"><input type="text" name="aname" value=" <?php echo $row['Admin_Name'];?> "/></td>
+							</tr>
+							<tr>
+								<td class = "label">Password : </td>
+								<td class="content"><input type="password" name="apass" value="<?php echo $row['Admin_Password'];?>"/></td>
+							</tr>
+							<tr>
+								<td><input type="submit" name="updatebtn" value="Update Now" /></td>
+							</tr>
+							</table>
+						</form>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+			
+		</div>
+	</div>	
 
 </body>
 </html>
