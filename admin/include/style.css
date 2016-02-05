@@ -130,3 +130,49 @@ input.login { width: 200px; margin: 5px 0 10px 0px;}
 	color: #fff;
 	text-shadow: 1px 1px #496d2a;
 }
+
+#rightContent {
+	width: 725px;
+	padding-top: 10px;
+	float: right;
+	border-left: 0px solid #dcdcdc;
+	text-align: left;
+	background: #fff;
+}
+#rightContent h3 {
+	font-size: 20px; 
+	font-weight: normal; 
+	padding: 0; margin: 5px; 
+	border-bottom: 1px dashed #dcdcdc; 
+}
+.entryTable {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.entryTable .label {
+	background-color: #EFEFEF;
+}
+
+
+.entryTable .content {
+	background-color: #FFFFFF;
+}
+#listTableHeader {
+	font-family: "Courier New", Courier, mono;
+	font-size: 14px;
+	color: #FFFFFF;
+	background-color: #3d8e00;
+	font-weight: bold;
+	background-position: center;
+}
+.row1 {
+	background-color: #EFEFEF;
+}
+
+.row2 {
+	background-color: #DEDEDE;
+}
+.Title{
+	font-size : 20px;
+}
