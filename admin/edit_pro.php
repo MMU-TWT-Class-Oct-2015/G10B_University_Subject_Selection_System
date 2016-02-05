@@ -67,7 +67,7 @@
 								<td class="content"><input type="password" name="apass" value="<?php echo $row['Admin_Password'];?>"/></td>
 							</tr>
 							<tr>
-								<td><input type="submit" name="updatebtn" value="Update Now" /></td>
+								<td><input type="submit" name="updatebtn" value="Update Now" /> <input name="button" type="button" id="btnCancel" value="Cancel" onClick="window.location.href='index.php';"></td>
 							</tr>
 							</table>
 						</form>
