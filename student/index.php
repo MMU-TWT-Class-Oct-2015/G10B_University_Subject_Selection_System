@@ -17,26 +17,15 @@
 </head>
 
 <body>
-
-<div id="header1" style="margin-left:auto;margin-right:auto;width:1520px;">
-			<a href="index.php"><img src="../picture/logo.png" width="205" height="73"></a>
-
-	<nav>
-	<ul>
-					<li><a href="index.php">Home</a></li>
-					<li><a href="edit_pro.php">Add Subject</a></li>
-					<li><a href="add_sub.php">About Us</a></li>
-					<li><a href="view_sub.php">Contact Us</a></li>
-	</ul>
-	</nav>
-
-	<span style="text-align:right;float:right;color:#FFFFFF;margin-top:-10px;font-size:25px;" >
-
-			<p style="margin-right:20px;">Welcome, <?php echo $row["Student_Name"]?> ||
-			<a href="#" onclick="window.location='logout.php'"  style="color:black; text-decoration:none;">Logout</a></p>
-	</span>
-</div>
-
-
-			</body>
+	<div id="header">
+		<div id="logo"><a href="index.php"><img src="../picture/logo.png"></a></div>
+		<div id="button">
+		
+			<label class="button-style"><a href="index.php">Home</a></label>
+			<label class="button-style"><a href="add_sub.php">Add Subject</a></label>
+			<label class="button-style"><a href="view_sub.php">View Subject</a></label>
+			<label class="button-style"><a href="logout.php">Welcome, <?php echo $row["Student_Name"]?> Logout</a></label>
+			<label>&nbsp;</label>
+	
+</body>
 </html>
