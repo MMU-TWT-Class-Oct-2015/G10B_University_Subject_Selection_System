@@ -1,23 +1,53 @@
 body{
 	font-family:"Times New Roman",Georgia,Serif;
 	margin: 0px auto; /*margin properties set the size of the white space OUTSIDE the border*/
-	background-color:#ccccff;
+	background: url(images/bg.jpg);
 	}
+#header #logo 
+{
+	float:left;
+	margin-left:0px;
+	margin-top:5px;
+	width:205px;
+	height:73px;
+}
+#header #button
+{	
+	padding-top:20px;
+	float:right;
+	clear:right;
+	margin-right:0px
+}
+#header #button label 
+{
+	border-left:1px solid #DB802D;
+	height:150px;
+	padding-top:90px;
+	padding-bottom:35px;
+}
+#header #button .button-style a
+{
+	padding:5px;
+	text-shadow:#FFF -10px 0 .5em,#FFF 10px 0 .5em,#FFF -30px 0 1em,#FFF 30px 0 1em;
+}
+#header #button .button-style 
+{
+	padding-left:10px;
+	padding-right:10px;
+}
+#header #button .button-style a:hover
+{
+	background:#DB802D;
+	color:black
+}
 #backcolor
 {
 	background-color:#ffb380;
 }
-#header1{
-	background-color: skyblue;
-	height: 72px;
-}
-#header2{
-	background-color: red;
-	height: 72px;
-}
+
 nav ul{
-	margin-left:370px;
-	margin-top:-104px;
+	margin-left:33%;
+	margin-top:-7.5%;
 	list-style:none;
 	font-size:25px;
 }
@@ -83,3 +113,11 @@ nav ul li ul li a
 	width: 100%;
 	margin-top:50px;
 }
+#container-about #slogan{
+	text-align:center;
+	padding-top:80px;
+	color:#000000;
+	font-size:40px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#about-bg {width:1024px;height:auto;margin-left:auto;margin-right:auto;}
