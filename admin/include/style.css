@@ -176,3 +176,8 @@ input.login { width: 200px; margin: 5px 0 10px 0px;}
 .Title{
 	font-size : 20px;
 }
+.inHeaderLogin {
+	background: url(img/logo.png) no-repeat left center;
+	height: 130px;
+	margin-left:10%;
+}
