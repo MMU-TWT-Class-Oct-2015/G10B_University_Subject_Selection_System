@@ -56,10 +56,5 @@
 		
 		</div>
 	</div>
-
-			<a href="index.php"><img src="../picture/logo.png" width="205" height="73"></a>
-
-	
-
 </body>
 </html>
