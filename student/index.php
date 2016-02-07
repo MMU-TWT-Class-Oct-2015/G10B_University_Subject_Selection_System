@@ -17,15 +17,18 @@
 </head>
 
 <body>
-	<div id="header">
-		<div id="logo"><a href="index.php"><img src="../picture/logo.png"></a></div>
-		<div id="button">
-		
-			<label class="button-style"><a href="index.php">Home</a></label>
-			<label class="button-style"><a href="add_sub.php">Add Subject</a></label>
-			<label class="button-style"><a href="view_sub.php">View Subject</a></label>
-			<label class="button-style">Welcome, <?php echo $row["Student_Name"]?> <a href="logout.php">Logout</a></label>
-			<label>&nbsp;</label>
-	
+	<div id="about-bg">
+		<div id="header">
+			<div id="logo"><a href="index.php"><img src="../images/logo.png"></a></div>
+			<div id="button">
+			
+				<label class="button-style"><a href="index.php">Home</a></label>
+				<label class="button-style"><a href="add_sub.php">Add Subject</a></label>
+				<label class="button-style"><a href="view_sub.php">View Subject</a></label>
+				<label class="button-style">Welcome, <?php echo $row["Student_Name"]?> <a href="logout.php">Logout</a></label>
+				<label>&nbsp;</label>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
