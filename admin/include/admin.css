@@ -1,0 +1,113 @@
+#listTableHeader {
+	font-family: "Courier New", Courier, mono;
+	font-size: 14px;
+	color: #FFFFFF;
+	background-color: #3d8e00;
+	font-weight: bold;
+	background-position: center;
+}
+
+#infoTableHeader {
+	font-family: "Courier New", Courier, mono;
+	font-size: 14px;
+	color: #FFFFFF;
+	background-color: #7F92A4;
+	font-weight: bold;
+	background-position: center;
+}
+
+#entryTableHeader {
+	font-family: "Courier New", Courier, mono;
+	font-size: 14px;
+	color: #FFFFFF;
+	background-color: #3d8e00;
+	font-weight: bold;
+	background-position: center;
+}
+
+.entryTable {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.entryTable .label {
+	background-color: #EFEFEF;
+}
+
+.entryTable .content {
+	background-color: #FFFFFF;
+}
+
+background-color: #CCCCFF;
+}
+
+.row1 {
+	background-color: #EFEFEF;
+}
+
+.row2 {
+	background-color: #DEDEDE;
+}
+
+
+body {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	text-align: center;
+	font-size: 10px;
+}
+
+.text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+
+a.nav {
+	font-family: "Courier New", "Courier", "mono";
+	font-size: 14px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	display: block;
+}
+
+
+a.leftnav {
+	font-family: "Courier New", Courier, mono;
+	font-size: 14px;
+	color: #333333;
+	background-color: #AABBCC;
+	display: block;
+	padding: 2px 2px 2px 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666666;
+	height: 25px;
+	width: 150px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a.leftnav:hover {
+	font-family: "Courier New", Courier, mono;
+	font-size: 14px;
+	color: #FFFFFF;
+	background-color: #999999;
+	display: block;
+	padding: 2px 2px 2px 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666666;
+	height: 25px;
+	width: 150px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.errorMessage {
+	color: #990000;
+	font-family: "Courier New", Courier, mono;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+}
