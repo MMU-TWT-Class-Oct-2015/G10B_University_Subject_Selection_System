@@ -91,7 +91,7 @@
 		$admin_name = $_POST['txtUserName'];
 		$admin_password= $_POST['txtPassword'];
 		mysql_query("insert into admin(Admin_ID,Admin_Name,Admin_Password)values
-		('$admin_id','$admin_name','$admin_password')");
+		('$admin_id','$admin_name',PASSWORD('$admin_password'))");
 
 ?>
 
