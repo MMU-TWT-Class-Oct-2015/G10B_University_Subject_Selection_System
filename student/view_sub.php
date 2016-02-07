@@ -4,7 +4,8 @@
 	$sess_sid=$_SESSION["sid"];
 
 	$result = mysql_query("SELECT * FROM subject,student where student.Student_Year=subject.Subject_Year and student.Stu_ID= $sess_sid");
-
+	$result1 = mysql_query("select * from student where Stu_ID = $sess_sid");
+	$row = mysql_fetch_assoc($result1);
    if (!$sess_sid) {
 		header('Location: login.php');
 		exit();
@@ -20,53 +21,52 @@
 </head>
 
 <body>
-	<div id="header1" style="margin-left:auto;margin-right:auto;width:1520px;">
-				<a href="index.php"><img src="../picture/logo.png" width="205" height="73"></a>
+	<div id="about-bg">
+		<div id="header">
+			<div id="logo"><a href="index.php"><img src="../images/logo.png"></a></div>
+			<div id="button">
+			
+				<label class="button-style"><a href="index.php">Home</a></label>
+				<label class="button-style"><a href="add_sub.php">Add Subject</a></label>
+				<label class="button-style"><a href="view_sub.php">View Subject</a></label>
+				<label class="button-style">Welcome, <?php echo $row["Student_Name"]?> <a href="logout.php">Logout</a></label>
+				<label>&nbsp;</label>
+			</div>
+		</div>
+		
+		<br clear="both">
+		<div id="container-about">
+		<div id="slogan">View Subject</div>
+		</div>
+		<br><br>
+		<div id="contact-content2">
+			<div class="contact-box2" style="border-radius:10px;padding:10px">
+				<table border="1" width="100%" >
+					<tr>
+						<th>Subject Code</th>
+						<th>Subject Title</th>
+						<th>Subject Date</th>
+						<th>Subject Time</th>
+					</tr>
+				<?php
+					while($row = mysql_fetch_assoc($result))
+					{
+					?>
+					<tr>
+						<td align="center"><?php echo $row["Subject_Code"];?></td>
+						<td align="center"><?php echo $row["Subject_Title"];?></td>
+						<td align="center"><?php echo $row["Subject_Date"];?></td>
+						<td align="center"><?php echo $row["Subject_Time"];?></td>
 
-		<nav>
-		<ul>
-						<li><a href="index.php">Home</a></li>
-						<li><a href="view_sub.php">Add Subject</a></li>
-						<li><a href="">About Us</a></li>
-						<li><a href="">Contact Us</a></li>
-		</ul>
-		</nav>
+					</tr>
 
-		<span style="text-align:right;float:right;color:#FFFFFF;margin-top:-10px;font-size:25px;" >
-
-				<p style="margin-right:20px;">
-				<a href="#" onclick="window.location='logout.php'"  style="color:black; text-decoration:none;">Logout</a></p>
-		</span>
-
-		<p style="padding-top:100px;">
-				<table border="1" width="500px">
-				<tr>
-					<th>Subject Code</th>
-					<th>Subject Title</th>
-					<th>Subject Date</th>
-					<th>Subject Time</th>
-				</tr>
-			<?php
-				while($row = mysql_fetch_assoc($result))
-				{
+				<?php
+					}
 				?>
-				<tr>
-					<td><?php echo $row["Subject_Code"];?></td>
-					<td><?php echo $row["Subject_Title"];?></td>
-					<td><?php echo $row["Subject_Date"];?></td>
-					<td><?php echo $row["Subject_Time"];?></td>
-
-				</tr>
-
-			<?php
-				}
-			?>
-			</table>
-		</p>
+				</table>
+			</div>
+		</div>
+		<br clear="all"><br clear="all"><br clear="all"><br clear="all">
 	</div>
-
-
-
-
 </body>
 </html>
