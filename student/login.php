@@ -16,7 +16,7 @@
 		</p>
 
 		<p>Password :
-			<input type="password" name="upass" size = "20" />
+			<input type="password" name="password" size = "20" />
 		</p>
 
 		<p>
@@ -31,9 +31,9 @@
 	if(isset($_POST['loginbtn']))
 	{
 	$userid = $_POST["uid"];
-	$userpass = $_POST["upass"];
 
-	$result = mysql_query("select * from student where Student_ID = '$userid' and Student_Password = '$userpass'");
+	$password =md5($_POST["password"]	);
+	$result = mysql_query("select * from student where Student_ID = '$userid' and Student_Password = '$password'");
 	if(mysql_num_rows($result)!=0)
 	{
 		$row = mysql_fetch_assoc($result);
