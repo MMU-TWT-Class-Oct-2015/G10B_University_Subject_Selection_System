@@ -28,6 +28,10 @@
 	</form>
 	</div>
 </div>
+	<span style="float:left;"><h1>University </h1></span>
+	<img src="../picture/logo.png">
+
+
 </body>
 </html>
 
@@ -35,14 +39,15 @@
 	if(isset($_POST['loginbtn']))
 	{
 	$userid = $_POST["uid"];
-	$userpass = $_POST["upass"];
-	
-	$result = mysql_query("select * from admin where Admin_ID = '$userid' and Admin_Password = '$userpass'");
+
+	$pass =md5($_POST["upass"]);
+
+	$result = mysql_query("select * from admin where Admin_ID = '$userid' and Admin_Password = '$pass'");
 	if(mysql_num_rows($result)!=0)
 	{
 		$row = mysql_fetch_assoc($result);
 		$_SESSION["aid"] = $row["Admin_ID"];
-		
+
 		header("Location: index.php");
 	}
 	else
@@ -53,7 +58,7 @@
 		</script>
 		<?php
 	}
-	
+
 	mysql_close();
 	}
 ?>
