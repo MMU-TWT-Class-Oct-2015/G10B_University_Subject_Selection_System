@@ -1,16 +1,12 @@
 <?php
 	include("../dataconn.php");
-
 	$sess_aid=$_SESSION["aid"];
-
 	$result = mysql_query("select * from admin where Admin_ID = $sess_aid");
 	$row = mysql_fetch_assoc($result);
-
    if (!$sess_aid) {
 		header('Location: login.php');
 		exit();
 	}
-
 ?>
 
 <?php
@@ -19,19 +15,15 @@
 	{
 		$id=$_POST["std_id"];
 		$name=$_POST["std_name"];
-		$password=$_POST["std_pass"];
+		$password =$_POST["std_pass"];
+		$password=md5($password);
 		$gender=$_POST["std_gender"];
 		$date=$_POST["std_date"];
 		$year=$_POST["std_year"];
 
-		if(empty($name))
-		{
-			$errors .= "\n Please enter an ID ! ";
-		}
-		else{
+
 			mysql_query("insert into student(Student_ID,Student_Name,Student_Password,Student_Gender,Student_Date,Student_Year)values
 			('$id','$name','$password','$gender','$date','$year')");
-		}
 
 ?>
 
@@ -46,6 +38,41 @@
 	<head>
 	<title>Admin index</title>
 	<link rel="stylesheet" href="include/style.css" type="text/css" />
+	<script>
+	function validation()
+	{
+		var id = document.forms["registration_page"]["std_id"].value;
+		var name = document.forms["registration_page"]["std_name"].value;
+		var pass = document.forms["registration_page"]["std_pass"].value;
+		var date = document.forms["registration_page"]["std_date"].value;
+		var year1 = document.forms["registration_page"]["std_year"].value;
+
+		if(id == "" || !isNaN(id))
+		{
+			alert("Please enter the correct id");
+			return false;
+		}
+
+		if(name == "" || !isNaN(name))
+		{
+			alert("Please enter the correct name");
+			return false;
+		}
+
+		if(pass == "" || !isNaN(pass))
+		{
+			alert("Please enter the correct password");
+			return false;
+		}
+
+		if(date == "" || !isNaN(date))
+		{
+			alert("Please enter the correct date");
+			return false;
+		}
+
+	}
+	</script>
 </head>
 
 <body>
@@ -74,13 +101,13 @@
 				<p>&nbsp;</p>
 				<p>&nbsp;</p>
 				<p>&nbsp;</p>
-			</ul>   
+			</ul>
 		</div>
 		<div id="rightContent">
 			<table width="100%" border="0" cellspacing="0" cellpadding="20">
 				<tr>
 					<td>
-						<form name="addfrm" method="post" action="">
+						<form action="register.php" method="post" name="registration_page" onsubmit="return validation()">
 							<p align="center" class="Title">Register Student</p>
 							<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="entryTable">
 								<tr>
@@ -117,9 +144,7 @@
 								</tr>
 							</table>
 							</p>
-							<?php 	if(!empty($errors)){
-							echo "<p class='err'>".nl2br($errors)."</p>";
-							} ?>
+
 						</form>
 					</td>
 				</tr>
@@ -127,7 +152,7 @@
 		</div>
 		<div class="clear"></div>
 		<div id="footer">
-		
+
 		</div>
 	</div>
 </body>
