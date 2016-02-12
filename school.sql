@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 28, 2016 at 05:20 PM
+-- Generation Time: Feb 12, 2016 at 04:02 PM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -31,7 +31,7 @@ USE `school`;
 CREATE TABLE IF NOT EXISTS `admin` (
   `Admin_ID` int(10) NOT NULL AUTO_INCREMENT,
   `Admin_Name` varchar(100) NOT NULL,
-  `Admin_Password` varchar(20) NOT NULL,
+  `Admin_Password` varchar(100) NOT NULL,
   PRIMARY KEY (`Admin_ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1121115995 ;
 
@@ -40,7 +40,22 @@ CREATE TABLE IF NOT EXISTS `admin` (
 --
 
 INSERT INTO `admin` (`Admin_ID`, `Admin_Name`, `Admin_Password`) VALUES
-(1121115994, 'Jing Xian', 'X12345');
+(1121115994, 'Jackie', '82a128f7f888823aefd5024b45220ff8');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order`
+--
+
+CREATE TABLE IF NOT EXISTS `order` (
+  `Order_ID` int(10) NOT NULL AUTO_INCREMENT,
+  `SubID` int(10) NOT NULL,
+  `Order_Title` varchar(100) NOT NULL,
+  `Order_Date` date NOT NULL,
+  `Order_Time` time NOT NULL,
+  PRIMARY KEY (`Order_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -52,23 +67,21 @@ CREATE TABLE IF NOT EXISTS `student` (
   `Stu_ID` int(10) NOT NULL AUTO_INCREMENT,
   `Student_ID` int(10) NOT NULL,
   `Student_Name` varchar(100) NOT NULL,
-  `Student_Password` varchar(20) NOT NULL,
+  `Student_Password` varchar(100) NOT NULL,
   `Student_Gender` varchar(10) NOT NULL,
   `Student_Date` date NOT NULL,
   `Student_Year` year(4) NOT NULL,
   PRIMARY KEY (`Stu_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `student`
 --
 
 INSERT INTO `student` (`Stu_ID`, `Student_ID`, `Student_Name`, `Student_Password`, `Student_Gender`, `Student_Date`, `Student_Year`) VALUES
-(1, 111111, 'ali', 'ali', 'Male', '2017-03-08', 2017),
-(2, 222222, 'ahmad', 'ahmad', 'Male', '2016-01-21', 2016),
-(3, 333333, 'kiti', 'kiti', 'Female', '2018-04-19', 2018),
-(4, 444444, 'jonan', 'jonan', 'Male', '2016-12-02', 2016),
-(6, 0, 'ili', 'jk', 'Male', '0000-00-00', 2017);
+(1, 111, 'ali', '86318e52f5ed4801abe1d13d509443de', 'Male', '2016-02-29', 2016),
+(2, 222, 'admad', '24b0be9388da52386dcbfe26fcb7d0a7', 'Male', '2017-06-14', 2017),
+(3, 333, 'Jult', '3aabe832145187f50b1b9bc1b88c89c6', 'Female', '2018-07-18', 2018);
 
 -- --------------------------------------------------------
 
@@ -93,11 +106,10 @@ CREATE TABLE IF NOT EXISTS `subject` (
 --
 
 INSERT INTO `subject` (`Subject_ID`, `Subject_Code`, `Subject_Title`, `Subject_Date`, `Subject_Time`, `Adm_ID`, `Subject_Year`) VALUES
-(10, 'efqed', 'edqwdqw', '2016-01-21', '11:00:00', 1121115994, 2016),
-(11, 'ff', 'ff', '2017-02-16', '12:00:00', 1121115994, 2017),
-(12, '   DCS22', 'mathematics', '2016-12-28', '00:20:16', 1121115994, 2016),
+(10, 'DCS8080', 'Business', '2017-04-06', '10:00:00', 1121115994, 2017),
+(12, ' DCS22 ', 'mathematic', '2016-12-28', '00:20:16', 1121115994, 2016),
 (13, 'TOP2231', 'Object-oriented programming', '2018-04-04', '09:00:00', 1121115994, 2018),
-(14, '', '', '0000-00-00', '00:00:00', 1121115994, 0000);
+(14, '  DCS444', 'Computer Security', '2016-02-27', '11:00:00', 1121115994, 2016);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
