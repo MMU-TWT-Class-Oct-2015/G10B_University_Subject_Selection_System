@@ -1,16 +1,12 @@
 <?php
 	include("../dataconn.php");
-
 	$sess_aid=$_SESSION["aid"];
-
 	$result = mysql_query("select * from admin where Admin_ID = $sess_aid");
 	$row = mysql_fetch_assoc($result);
-
    if (!$sess_aid) {
 		header('Location: login.php');
 		exit();
 	}
-
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +41,7 @@
 				<p>&nbsp;</p>
 				<p>&nbsp;</p>
 				<p>&nbsp;</p>
-			</ul>   
+			</ul>
 		</div>
 		<div id="rightContent">
 			<table width="100%" border="0" cellspacing="0" cellpadding="20">
@@ -77,9 +73,9 @@
 		</div>
 		<div class="clear"></div>
 		<div id="footer">
-			
+
 		</div>
-	</div>	
+	</div>
 
 </body>
 </html>
@@ -88,9 +84,7 @@
 	if(isset($_POST["updatebtn"]))
 	{
 		$adname = $_POST["aname"];
-
-		$adpass = $_POST["apass"];
-
+		$adpass = md5($_POST["apass"]);
 		mysql_query("update admin set Admin_Name = '$adname', Admin_Password = '$adpass' where Admin_ID = $sess_aid ");
 	?>
 
