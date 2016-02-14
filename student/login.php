@@ -11,7 +11,7 @@
 <body>
 	<div id="about-bg">
 		<div id="header">
-			<div id="logo"><a href="main.php"><img src="../images/logo.png"></a></div>
+			<div id="logo"><a href="main.php"><img src="https://cloud.githubusercontent.com/assets/16029045/13034158/dc19b4fa-d368-11e5-9d1d-b04c54eb47ed.png"></a></div>
 			
 			
 		</div>
