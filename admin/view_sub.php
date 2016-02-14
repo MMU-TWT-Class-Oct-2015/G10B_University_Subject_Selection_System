@@ -50,7 +50,7 @@
 						<p align="center" class="Title">View Subjects</p>
 						<form name="addfrm" method="post" action="">
 							<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="entryTable">
-								<tr>
+								<tr id="listTableHeader">
 									<th>Subject Code</th>
 									<th>Subject Title</th>
 									<th>Subject Date</th>
@@ -60,10 +60,18 @@
 								</tr>
 								<?php
 									$result = mysql_query("select * from subject");
+									$i = 0;
 									while($row = mysql_fetch_assoc($result))
 									{
+										extract($row);
+										if ($i%2) {
+											$class = 'row1';
+										} else {
+											$class = 'row2';
+										}
+										$i += 1;
 								?>
-								<tr>
+								<tr class="<?php echo $class; ?>">
 									<td><?php echo $row["Subject_Code"];?></td>
 									<td><?php echo $row["Subject_Title"];?></td>
 									<td><?php echo $row["Subject_Date"];?></td>
@@ -72,7 +80,6 @@
 									<td><a href="del_sub.php?pid=<?php echo $row['Subject_ID'];?>"
 							onclick="return confirm('Do you want to delete this subject?')">Delete</a></td>
 								</tr>
-
 								<?php
 									}
 								?>
