@@ -37,16 +37,21 @@ function runQuery($query) {
 			<div id="button">
 			
 				<label class="button-style"><a href="index.php">Home</a></label>
-				<label class="button-style"><a href="subject.php">Add Subject</a></label>
+				<label class="button-style"><a href="cart.php">Add Subject</a></label>
 				<label class="button-style"><a href="view_sub.php">View Subject</a></label>
 				<label class="button-style">Welcome, <?php echo $rows["Student_Name"]?> <a href="logout.php">Logout</a></label>
 				<label>&nbsp;</label>
 			</div>
 		</div>
-	</div>      	
-
-		<p style="padding-top:300px;">
-				<table border="1" width="500px">
+		<br clear="both">
+		<div id="container-about">
+			<div id="slogan">ADD SUBJECT</div>
+		</div>
+		<div id="contact-content2">
+			<br clear="both">
+			<br clear="both">
+			<div class="contact-box2" style="border-radius:10px;padding:10px">
+				<table border="1" width="100%" >
 					<tr>
 						<th>Subject Code</th>
 						<th>Subject Title</th>
@@ -62,14 +67,11 @@ function runQuery($query) {
 				?>
 				<form name="category" action="cart.php?action=add&code=<?php echo $product_array[$key]["Subject_Code"]; ?>" method="post"/>
 					<tr>
-						<td><?php echo $product_array[$key]["Subject_Code"]; ?></td>
-						<td><?php echo $product_array[$key]["Subject_Title"]; ?></td>
-						<td><?php echo $product_array[$key]["Subject_Date"]; ?></td>
-						<td><?php echo $product_array[$key]["Subject_Time"]; ?></td>
-						<td><input type="hidden" name="quantity" value="1" size="2" /><input type="submit" value="Add to cart" class="btnAddAction" /></td>
-					</tr>
-					<tr>
-
+						<td align="center"><?php echo $product_array[$key]["Subject_Code"]; ?></td>
+						<td align="center"><?php echo $product_array[$key]["Subject_Title"]; ?></td>
+						<td align="center"><?php echo $product_array[$key]["Subject_Date"]; ?></td>
+						<td align="center"><?php echo $product_array[$key]["Subject_Time"]; ?></td>
+						<td align="center"><input type="hidden" name="quantity" value="1" size="2" /><input type="submit" value="Add to cart" class="btnAddAction" /></td>
 					</tr>
 
 				</form>
@@ -77,6 +79,13 @@ function runQuery($query) {
 					}
 					}	
 				?>
+				</table>
+			</div>
+			
+		</div>
+	</div>      	
+
+				
 		
 </body>
 </html>
