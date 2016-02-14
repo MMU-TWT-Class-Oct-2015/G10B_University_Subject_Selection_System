@@ -74,26 +74,28 @@ function runQuery($query) {
 			<div id="button">
 			
 				<label class="button-style"><a href="index.php">Home</a></label>
-				<label class="button-style"><a href="subject.php">Add Subject</a></label>
+				<label class="button-style"><a href="cart.php">Add Subject</a></label>
 				<label class="button-style"><a href="view_sub.php">View Subject</a></label>
 				<label class="button-style">Welcome, <?php echo $rows["Student_Name"]?> <a href="logout.php">Logout</a></label>
 				<label>&nbsp;</label>
 			</div>
 		</div>
-	</div>      	
-
-		<p style="padding-top:300px;">
-				
-			</table>
-			
-		</p>
-		
-
-		<?php
+		<br clear="both">
+		<div id="container-about">
+			<div id="slogan">ADD SUBJECT</div>
+			<br clear="both">
+			<p align="center">
+				<a href="subject.php"><input type="button" value="Continue Add Subject"></a> <a id="btnEmpty" href="cart.php?action=empty"><input type="button" value="Empty cart"></a>
+			</p>
+		</div>
+		<div id="contact-content2">
+			<br clear="both">
+			<div class="contact-box2" style="border-radius:10px;padding:10px">
+				<?php
 			if(isset($_SESSION["cart_item"])){
 				$item_total = 0;
 			?>
-			<table cellpadding="10" cellspacing="1">
+			<table border="1" width="100%" >
 			<tbody>
 			<tr>
 			<th><strong>Subject Code</strong></th>
@@ -106,11 +108,11 @@ function runQuery($query) {
 				foreach ($_SESSION["cart_item"] as $item){
 					?>
 							<tr>
-							<td><?php echo $item["code"]; ?></td>
-							<td><?php echo $item["title"]; ?></td>
-							<td><?php echo $item["date"]; ?></td>
-							<td><?php echo $item["time"]; ?></td>
-							<td><a href="cart.php?action=remove&id=<?php echo $item["code"]; ?>" class="btnRemoveAction">Remove Item</a></td>
+							<td align="center"><?php echo $item["code"]; ?></td>
+							<td align="center"><?php echo $item["title"]; ?></td>
+							<td align="center"><?php echo $item["date"]; ?></td>
+							<td align="center"><?php echo $item["time"]; ?></td>
+							<td align="center"><a href="cart.php?action=remove&id=<?php echo $item["code"]; ?>" class="btnRemoveAction">Remove Item</a></td>
 							</tr>
 							<?php
 					}
@@ -120,7 +122,14 @@ function runQuery($query) {
 			  <?php
 			}
 		?>
-		<p><a href="subject.php"><input type="button" value="Continue Add Subject"></a>
-		<a id="btnEmpty" href="cart.php?action=empty"><input type="button" value="Empty cart"></a></p>
+				
+			</div>
+		</div>
+	</div>      	
+
+		
+
+		
+		
 </body>
 </html>
