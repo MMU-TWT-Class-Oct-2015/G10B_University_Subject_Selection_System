@@ -1,7 +1,7 @@
 body{
 	font-family:"Times New Roman",Georgia,Serif;
 	margin: 0px auto; /*margin properties set the size of the white space OUTSIDE the border*/
-	background: url(images/bg.jpg);
+	background-image: url("picture/background.jpg");
 	}
 #header #logo 
 {
