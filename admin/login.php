@@ -28,8 +28,6 @@
 	</form>
 	</div>
 </div>
-	<span style="float:left;"><h1>University </h1></span>
-	<img src="../picture/logo.png">
 
 
 </body>
