@@ -19,7 +19,7 @@
 <body>
 	<div id="about-bg">
 		<div id="header">
-			<div id="logo"><a href="index.php"><img src="../images/logo.png"></a></div>
+			<div id="logo"><a href="index.php"><img src="../picture/logo.png" width="320" height="128"></a></div>
 			<div id="button">
 			
 				<label class="button-style"><a href="index.php">Home</a></label>
