@@ -1,5 +1,5 @@
 body {
-	background: url(img/latar.jpg);
+	background: url(https://cloud.githubusercontent.com/assets/16029045/13034130/1e1523fe-d368-11e5-99f0-db4781000a83.jpg);
 	margin: 0;
 	padding: 0;
 	font-family: Arial;
@@ -33,7 +33,7 @@ input.login { width: 200px; margin: 5px 0 10px 0px;}
 #header {
 	width: 100%;
 	border-bottom: 1px solid #dcdcdc;
-	background: url(img/headerbg.jpg) repeat left;
+	background: url(https://cloud.githubusercontent.com/assets/16029045/13034123/e304d7be-d367-11e5-98dd-850b57d95e7f.jpg) repeat left;
 	height: 140px;
 	z-index: 1000;
 	-moz-box-shadow: 0px 0px 8px #dcdcdc;
@@ -56,7 +56,7 @@ input.login { width: 200px; margin: 5px 0 10px 0px;}
 	margin: 0 1px 0 auto;
 	text-align: right;
 	padding: 10px 40px 10px 10px;
-	background: url(img/Administrator.png) no-repeat right center;
+	background: url(https://cloud.githubusercontent.com/assets/16029045/13034109/479de13a-d367-11e5-93dd-9b7f83129da2.png) no-repeat right center;
 	text-shadow: 1px 1px #fff;
 }
 
@@ -66,7 +66,7 @@ input.login { width: 200px; margin: 5px 0 10px 0px;}
 	border: 1px solid #dcdcdc;
 	float: center;
 	text-align: left;
-	background:#fff url(img/lock.png) no-repeat left center;
+	background:#fff url(https://cloud.githubusercontent.com/assets/16029045/13034138/45ba7c06-d368-11e5-803b-41399292c3fb.png) no-repeat left center;
 	margin: 50px auto 0 auto;
 	border-radius: 5px;
 }
@@ -94,7 +94,7 @@ input.login { width: 200px; margin: 5px 0 10px 0px;}
 	float: center;
 	margin: auto;
 	text-align: left;
-	background: #fff url(img/bg_kiri.png) repeat-y;
+	background: #fff url(https://cloud.githubusercontent.com/assets/16029045/13034116/8f9b97ac-d367-11e5-877a-4a20e7ff0eb4.png) repeat-y;
 	box-shadow: 0px 0px 8px #dcdcdc;
 }
 #leftBar {
@@ -107,7 +107,7 @@ input.login { width: 200px; margin: 5px 0 10px 0px;}
 #leftBar ul {list-style: none;padding: 0; margin: 0;font-size: 13px;}
 #leftBar ul li {
 	width: 164px;
-	background: url(img/icon-left.png) no-repeat left center, url(img/green.jpg) repeat left center;
+	background: url(https://cloud.githubusercontent.com/assets/16029045/13034128/04f03e04-d368-11e5-9efa-96c272e96791.png) no-repeat left center, url(https://cloud.githubusercontent.com/assets/16029045/13034121/bbc26982-d367-11e5-84fe-ec50c9466168.jpg) repeat left center;
 	padding: 10px 0 10px 10px; 
 	margin-top: 8px;
 	margin-left: auto;
@@ -177,7 +177,7 @@ input.login { width: 200px; margin: 5px 0 10px 0px;}
 	font-size : 20px;
 }
 .inHeaderLogin {
-	background: url(img/logo.png) no-repeat left center;
+	background: url(https://cloud.githubusercontent.com/assets/16029045/13034148/7de963bc-d368-11e5-84da-ca9105b647cf.png) no-repeat left center;
 	height: 130px;
 	margin-left:10%;
 }
