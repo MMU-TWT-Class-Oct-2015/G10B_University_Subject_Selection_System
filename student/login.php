@@ -5,24 +5,48 @@
 <html>
 <head>
 	<title>Login Page</title>
+	<link href="../design.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-	<span style="float:left;"><h1>University </h1></span>
-	<img src="../picture/logo.png">
-	<form name="loginfrm" action="" method="post">
-		<p>User ID:
-			<input type="text" name="uid" size = "20" />
-		</p>
-
-		<p>Password :
-			<input type="password" name="password" size = "20" />
-		</p>
-
-		<p>
-			<input type="submit" name="loginbtn" value="Login" />
-		</p>
-	</form>
+	<div id="about-bg">
+		<div id="header">
+			<div id="logo"><a href="main.php"><img src="../images/logo.png"></a></div>
+			
+			
+		</div>
+		<br clear="both">
+		<div id="container-about">
+			<div id="slogan">STUDENT LOGIN</div>
+			<br clear="both">
+			<div id="member-content">
+				<div class="member-form" style="text-align:center">
+					<form name="loginfrm" action="" method="post">
+						<table align = "center">
+							<div style="font-size:30px;border-bottom:1px solid #cccccc;font-family:Andalus;text-align:center">Sign In</div>
+							<br/>
+							<tr>
+								<td class="enquiry-info">User ID: </td>
+								<td><input type="text" name="uid" size = "20" style="border-radius:5px;font-size:18px;color: #933;text-align: left;background-color: #FFC;font-family: Georgia, Times New Roman, Times, serif;text-align:center"></td>
+							</tr>
+							<tr>
+								<td class="enquiry-info">Password : </td>
+								<td><input type="password" name="upass" size = "20" style="border-radius:5px;font-size:18px;color: #933;text-align: left;background-color: #FFC;font-family: Georgia, Times New Roman, Times, serif;text-align:center"/></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="enquiry-box"><input type="submit" name="loginbtn" value="Login" /></td>
+							</tr>
+						</table>
+					</form>
+					
+				</div>
+			</div>
+		</div> 
+		<br clear="both"><br clear="both"><br clear="both">
+	
+	</div>
+	
 
 </body>
 </html>
@@ -32,7 +56,7 @@
 	{
 	$userid = $_POST["uid"];
 
-	$password =md5($_POST["password"]	);
+	$password =md5($_POST["upass"]	);
 	$result = mysql_query("select * from student where Student_ID = '$userid' and Student_Password = '$password'");
 	if(mysql_num_rows($result)!=0)
 	{
