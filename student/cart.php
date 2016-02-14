@@ -70,7 +70,7 @@ function runQuery($query) {
 ?>
 	<div id="about-bg">
 		<div id="header">
-			<div id="logo"><a href="index.php"><img src="https://cloud.githubusercontent.com/assets/16029083/13032953/e0e6f204-d340-11e5-86a8-6136ec5666ea.png" width="320" height="128"></a></div>
+			<div id="logo"><a href="index.php"><img src="https://cloud.githubusercontent.com/assets/16029045/13034158/dc19b4fa-d368-11e5-9d1d-b04c54eb47ed.png" width="320" height="128"></a></div>
 			<div id="button">
 			
 				<label class="button-style"><a href="index.php">Home</a></label>
