@@ -23,7 +23,7 @@
 			<div id="button">
 			
 				<label class="button-style"><a href="index.php">Home</a></label>
-				<label class="button-style"><a href="add_sub.php">Add Subject</a></label>
+				<label class="button-style"><a href="cart.php">Add Subject</a></label>
 				<label class="button-style"><a href="view_sub.php">View Subject</a></label>
 				<label class="button-style">Welcome, <?php echo $row["Student_Name"]?> <a href="logout.php">Logout</a></label>
 				<label>&nbsp;</label>
