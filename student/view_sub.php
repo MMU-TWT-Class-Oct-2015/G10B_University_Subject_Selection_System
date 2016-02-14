@@ -23,16 +23,20 @@
 			<div id="button">
 			
 				<label class="button-style"><a href="index.php">Home</a></label>
-				<label class="button-style"><a href="add_sub.php">Add Subject</a></label>
+				<label class="button-style"><a href="cart.php">Add Subject</a></label>
 				<label class="button-style"><a href="view_sub.php">View Subject</a></label>
 				<label class="button-style">Welcome, <?php echo $rows["Student_Name"]?> <a href="logout.php">Logout</a></label>
 				<label>&nbsp;</label>
 			</div>
 		</div>
-	</div>
-
-		<p style="padding-top:300px;">
-				<table border="1" width="500px">
+		<br clear="both">
+		<div id="container-about">
+		<div id="slogan">View Subject</div>
+		</div>
+		<br><br>
+		<div id="contact-content2">
+			<div class="contact-box2" style="border-radius:10px;padding:10px">
+			<table border="1" width="100%" >
 				<tr>
 					<th>Subject Code</th>
 					<th>Subject Title</th>
@@ -45,10 +49,10 @@
 				{
 				?>
 				<tr>
-					<td><?php echo $row["Subject_Code"];?></td>
-					<td><?php echo $row["Subject_Title"];?></td>
-					<td><?php echo $row["Subject_Date"];?></td>
-					<td><?php echo $row["Subject_Time"];?></td>
+					<td align="center"><?php echo $row["Subject_Code"];?></td>
+					<td align="center"><?php echo $row["Subject_Title"];?></td>
+					<td align="center"><?php echo $row["Subject_Date"];?></td>
+					<td align="center"><?php echo $row["Subject_Time"];?></td>
 
 				</tr>
 
@@ -56,7 +60,12 @@
 				}
 			?>
 			</table>
-		</p>
+				
+			</div>
+		</div>
+		<br clear="all"><br clear="all"><br clear="all"><br clear="all">
+	</div>
+
 
 </body>
 </html>
