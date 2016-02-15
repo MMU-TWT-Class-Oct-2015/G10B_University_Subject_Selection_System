@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 12, 2016 at 04:02 PM
+-- Generation Time: Feb 15, 2016 at 07:33 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 --
 
 INSERT INTO `admin` (`Admin_ID`, `Admin_Name`, `Admin_Password`) VALUES
-(1121115994, 'Jackie', '82a128f7f888823aefd5024b45220ff8');
+(1121115994, '  Jackie  ', '82a128f7f888823aefd5024b45220ff8');
 
 -- --------------------------------------------------------
 
@@ -49,13 +49,23 @@ INSERT INTO `admin` (`Admin_ID`, `Admin_Name`, `Admin_Password`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `order` (
-  `Order_ID` int(10) NOT NULL AUTO_INCREMENT,
-  `SubID` int(10) NOT NULL,
+  `Order_ID` varchar(10) NOT NULL,
+  `StudID` int(10) NOT NULL,
   `Order_Title` varchar(100) NOT NULL,
   `Order_Date` date NOT NULL,
-  `Order_Time` time NOT NULL,
-  PRIMARY KEY (`Order_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `Order_Time` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `order`
+--
+
+INSERT INTO `order` (`Order_ID`, `StudID`, `Order_Title`, `Order_Date`, `Order_Time`) VALUES
+(' DCS22 ', 1, 'mathematic', '2016-12-28', '00:20:16'),
+(' DCS22 ', 0, 'mathematic', '2016-12-28', '00:20:16'),
+(' DCS22 ', 111, 'mathematic', '2016-12-28', '00:20:16'),
+('  DCS444', 111, 'Computer Security', '2016-02-27', '11:00:00'),
+(' DCS22 ', 111, 'mathematic', '2016-12-28', '00:20:16');
 
 -- --------------------------------------------------------
 
@@ -72,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `student` (
   `Student_Date` date NOT NULL,
   `Student_Year` year(4) NOT NULL,
   PRIMARY KEY (`Stu_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `student`
@@ -81,7 +91,13 @@ CREATE TABLE IF NOT EXISTS `student` (
 INSERT INTO `student` (`Stu_ID`, `Student_ID`, `Student_Name`, `Student_Password`, `Student_Gender`, `Student_Date`, `Student_Year`) VALUES
 (1, 111, 'ali', '86318e52f5ed4801abe1d13d509443de', 'Male', '2016-02-29', 2016),
 (2, 222, 'admad', '24b0be9388da52386dcbfe26fcb7d0a7', 'Male', '2017-06-14', 2017),
-(3, 333, 'Jult', '3aabe832145187f50b1b9bc1b88c89c6', 'Female', '2018-07-18', 2018);
+(3, 333, 'Jult', '3aabe832145187f50b1b9bc1b88c89c6', 'Female', '2018-07-18', 2018),
+(4, 0, '', 'd41d8cd98f00b204e9800998ecf8427e', 'Male', '0000-00-00', 0000),
+(5, 0, '', 'd41d8cd98f00b204e9800998ecf8427e', 'Male', '0000-00-00', 0000),
+(6, 0, 'wqdqwd', 'bf9afc6d7a70a93fbf860d70b72b328c', 'Male', '2016-02-16', 2016),
+(7, 0, 'wqdqwd', 'a2958ec16247ad36c229546487296c93', 'Male', '2016-02-24', 0000),
+(8, 0, 'wqdqw', 'a2958ec16247ad36c229546487296c93', 'Male', '2016-02-25', 2016),
+(9, 0, 'cc', '9df62e693988eb4e1e1444ece0578579', 'Male', '2016-02-17', 0000);
 
 -- --------------------------------------------------------
 
