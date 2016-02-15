@@ -23,6 +23,7 @@ Besides that, this system will make human error decrease. This is because websit
 By using this system, the university also became easily to manage student information because the subject had be chosen by students will record in the database. When the database recorded those information, admin not need spend another time to key in those information to achieve double benefit for admin.
 
 
+
 ----------
 
 **Scope of the project**
@@ -31,6 +32,8 @@ By using this system, the university also became easily to manage student inform
 This project is to let the student to do the subject register base on the year. This project also let student to see what subject offer in this trimester or in this year, students are allow to register the subject which offer in this year only. 
 
 This project also will show the subject at subject list for each student according to their year of study, for example students in first year, only the subjects, which are offered for the first year, must be appeared in the subject list.
+
+
 ----------
 
 **Contribution of the project**
