@@ -54,3 +54,18 @@ Student will be the user in this system, after admin give them their account and
 
 Eventually, we sincerely hope that our system can really bring a lot of convenience to every user who might using on in the coming future. Our team already put much effort during develop the system interface, design, especially the most complicated one PHP code. Since we still novice in this field, hence, we hope that we can improve ourselves by learning more from website, expert, also gain new knowledge from lecture during class so that we might able to working on students register system in large scale with uniqueness of functionality which can easier user’s life.
 
+----------
+
+**Appendices**
+--------------------
+*Sample Output*
+![studnet add subject page](https://cloud.githubusercontent.com/assets/16029045/13040318/b0fa01bc-d3e5-11e5-8885-8c91d6307593.JPG)
+
+![student login page](https://cloud.githubusercontent.com/assets/16029045/13040330/c6be3572-d3e5-11e5-987b-b2747acb997e.JPG)
+
+![admin login page](https://cloud.githubusercontent.com/assets/16029045/13040337/cd04f6f0-d3e5-11e5-85e4-1dceadeeac40.JPG)
+
+![admin view subject list page](https://cloud.githubusercontent.com/assets/16029045/13040361/004cddc0-d3e6-11e5-914f-8066e033a990.JPG)
+
+
+----------
