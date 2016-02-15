@@ -28,7 +28,7 @@
 ?>
 
 <?php
-	header("location:view_sub.php");
+	header("location:index.php");
 }
 ?>
 
@@ -47,11 +47,6 @@
 		var date = document.forms["registration_page"]["std_date"].value;
 		var year1 = document.forms["registration_page"]["std_year"].value;
 
-		if(id == "" || !isNaN(id))
-		{
-			alert("Please enter the correct id");
-			return false;
-		}
 
 		if(name == "" || !isNaN(name))
 		{
@@ -59,12 +54,7 @@
 			return false;
 		}
 
-		if(pass == "" || !isNaN(pass))
-		{
-			alert("Please enter the correct password");
-			return false;
-		}
-
+		
 		if(date == "" || !isNaN(date))
 		{
 			alert("Please enter the correct date");
