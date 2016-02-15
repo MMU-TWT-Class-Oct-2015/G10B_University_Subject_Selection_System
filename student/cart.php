@@ -40,7 +40,18 @@
 		break;
 	}
 	}
-
+	if(isset($_GET["pid"])) 
+	{
+		foreach ($_SESSION["cart_item"] as $item){
+			$code=$item["code"];
+			$title=$item["title"];
+			$date=$item["date"];
+			$time=$item["time"];
+			$student_ID = $rows["Student_ID"];
+			$sql = "INSERT INTO `order`(`Order_ID`, `StudID`,`Order_Title`, `Order_Date`, `Order_Time`) VALUES ('$code', '$student_ID','$title', '$date', '$time')"; 
+			$result = mysql_query($sql) or die(mysql_error());
+		}
+	}
    if (!$sess_sid) {
 		header('Location: login.php');
 		exit();
@@ -122,7 +133,8 @@ function runQuery($query) {
 			  <?php
 			}
 		?>
-				
+				<a href="cart.php?pid=<?php echo $confirm['Subject_ID'];?>"
+							onclick="return confirm('Do you want to add this subject?')">Add Subject</a>
 			</div>
 		</div>
 	</div>      	
